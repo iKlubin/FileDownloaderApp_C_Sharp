@@ -37,7 +37,7 @@ namespace FileDownloaderApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (webClient != null && webClient.IsBusy)
+            if ((webClient != null && webClient.IsBusy) || tbUrl != null)
             {
                 MessageBox.Show("Загрузка уже выполняется.", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
